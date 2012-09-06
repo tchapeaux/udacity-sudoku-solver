@@ -110,8 +110,8 @@ def parse_string(gridString):
             continue
         grid.append([])
         cells = l.split()
-        for c in cells
-        grid[i].append(int(c))
+        for c in cells:
+            grid[i].append(int(c))
     return grid
 
 import copy
@@ -119,22 +119,22 @@ import time
 import sys
 
 grids = []
-for i in range(1, len(sys.argv))
+argc = len(sys.argv)
+for i in range(1, argc):
     filename = sys.argv[1]
     try:
         f = open(filename)
-        grids.append(parse_string(f.read())
+        grids.append(parse_string(f.read()))
         f.close()
     except IOError:
-        print "Opening of " . filename . " failed."
+        print "Opening of " + filename + " failed."
 
-if (len(sys.argv == 1)):
+if (argc == 1):
     grids.append(ill_formed)
     grids.append(valid)
     grids.append(invalid)
     grids.append(easy)
     #grids.append(hard)
-grids = [ill_formed, valid, invalid, easy]
 
 for g in grids:
     print "GRID : \n" + grid_as_string(g)
