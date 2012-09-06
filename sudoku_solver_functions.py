@@ -62,6 +62,7 @@ hard = [[1,0,0,0,0,7,0,9,0],
         [0,4,0,0,0,0,0,0,7],
         [0,0,7,0,0,0,3,0,0]]
 
+import math
 
 def grid_as_string(grid):
   gridString = ""
