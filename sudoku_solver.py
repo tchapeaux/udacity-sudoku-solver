@@ -18,11 +18,14 @@ if (__name__ == "__main__"):
             print "Opening of " + filename + " failed."
 
     if (argc == 1):
+        raise Exception("Missing parameter: filepath to a grid")
+        """
         grids.append(ill_formed)
         grids.append(valid)
         grids.append(invalid)
         grids.append(easy)
-        #grids.append(hard)
+        grids.append(hard)
+        """
 
     for g in grids:
         print "GRID : \n" + grid_as_string(g)
