@@ -1,5 +1,4 @@
 from sudoku_solver_functions import *
-import math
 import sys
 
 if (__name__ == "__main__"):
@@ -18,14 +17,13 @@ if (__name__ == "__main__"):
             print "Opening of " + filename + " failed."
 
     if (argc == 1):
-        raise Exception("Missing parameter: filepath to a grid")
-        """
+        print "No file given. Default grid used."
         grids.append(ill_formed)
         grids.append(valid)
         grids.append(invalid)
         grids.append(easy)
-        grids.append(hard)
-        """
+        print("default grid 'hard' was ignored")
+        #grids.append(hard)
 
     for g in grids:
         print "GRID : \n" + grid_as_string(g)
@@ -39,13 +37,13 @@ if (__name__ == "__main__"):
                     assert (g_copy[i][j] != 0)
                     assert g[i][j] == 0 or g[i][j] == g_copy[i][j]
             print "found solution in ", stop_time - start_time, " second(s) :"
-            print "SOLUTION :\n"+ grid_as_string(g_copy)
+            print "SOLUTION :\n" + grid_as_string(g_copy)
         else:
             print "Not a correct grid! :("
 
 # INITIAL INSTRUCTIONS
 
-# CHALLENGE PROBLEM: 
+# CHALLENGE PROBLEM:
 #
 # Use your check_sudoku function as the basis for solve_sudoku(): a
 # function that takes a partially-completed Sudoku grid and replaces
